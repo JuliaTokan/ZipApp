@@ -2,10 +2,8 @@ package zip.demo.zip;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import zip.demo.user.CustomUser;
 
 import javax.persistence.*;
-import java.util.zip.ZipEntry;
 
 @Entity
 @Data @NoArgsConstructor
@@ -18,8 +16,8 @@ public class ZipArchive {
 
     private String login;
 
-    @Lob
-    @Column(columnDefinition = "BLOB")
+    /*@Lob
+    @Column(columnDefinition = "BLOB")*/
     private byte[] zipFile;
 
     public ZipArchive(String pathZipFile, String login, byte[] file) {
